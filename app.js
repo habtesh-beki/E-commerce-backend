@@ -17,7 +17,7 @@ app.use(cors({
 
 app.use(express.json());
 
-app.use('/' , {
+app.use('/' ,(req,res) {
    res.send('hello')
 })
 app.use('/api/users', userRoute)
