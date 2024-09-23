@@ -17,7 +17,9 @@ app.use(cors({
 
 app.use(express.json());
 
-
+app.get('/', (req,res) => {
+   res.send("Start")
+})
 app.use('/api/users', userRoute)
 app.use('/api/products', productRoute)
 app.use('/api/orders', orderRoute)
