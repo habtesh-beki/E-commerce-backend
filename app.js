@@ -17,9 +17,9 @@ app.use(cors({
 
 app.use(express.json());
 
-app.use('/' ,(req,res) {
-   res.send('hello')
-})
+// app.use('/' ,(req,res) {
+//    res.send('hello')
+// })
 app.use('/api/users', userRoute)
 app.use('/api/products', productRoute)
 app.use('/api/orders', orderRoute)
