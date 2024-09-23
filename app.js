@@ -9,9 +9,8 @@ const orderRoute = require('./Routes/orderRoute')
 const paymentRoute = require('./Routes/paymentRoute')
 
 const app = express();
-
 app.use(cors({
-   origin: 'http://localhost:5173',  
+   origin: 'https://e-commerce-frontend-roan-seven.vercel.app',  
    credentials: true,  
  }));
 
@@ -26,7 +25,6 @@ app.use('/api/payments', paymentRoute)
 app.all('*' , (req, res ,next) => {
    next(new AppError(`can't find URL ${req.originalUrl} on this server` , 404))
 })
-
 app.use(globalErrorHandeler)
 
 module.exports = app

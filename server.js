@@ -4,8 +4,7 @@ const mongoose = require('mongoose')
 
 dotenv.config()
 
-const DB = process.env.DATABASE
-
+const DB = process.env.DATABASE_WEB
 
 mongoose.connect(DB, {
 
